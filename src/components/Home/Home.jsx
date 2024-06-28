@@ -4,7 +4,7 @@ import instagram from '@/assets/instagram.svg'
 import facebook from '@/assets/facebook.svg'
 import youtube from '@/assets/youtube.svg'
 import twitter from '@/assets/twitter.svg'
-import logo from '@/assets/logo.svg'
+import kijijiLogo from '@/assets/kijijilogo.svg'
 import appleTemu from '@/assets/apple-from-temu.svg'
 import appleEnglish from '@/assets/apple.svg'
 import googleEnglish from '@/assets/google.png'
@@ -33,7 +33,7 @@ export default function Home() {
     <Button icon={instagram} link='http://www.instagram.com' ></Button>
     <Button icon={twitter} link='http://www.twitter.com' ></Button>
     <Button icon={youtube} link='http://www.youtube.com' ></Button>
-    <Button icon={logo} link='https://www.kijiji.ca/kijijicentral/' ></Button>
+    <Button icon={kijijiLogo} link='https://www.kijiji.ca/kijijicentral/' ></Button>
     <a href="http://www.temu.com" ><img src={appleTemu} alt="apple" /></a>
     <a href="https://www.alibaba.com" ><img className="google" src={googleAlbania} alt="google" /></a>
     </>
