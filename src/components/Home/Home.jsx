@@ -38,4 +38,4 @@ export default function Home() {
     <a href="https://www.alibaba.com" ><img className="google" src={googleAlbania} alt="google" /></a>
     </>
   );
-};
+}
