@@ -2,7 +2,6 @@ import "./Post.scss";
 import { useEffect, useState } from "react";
 import ImageGen from "@/components/ImageGen/ImageGen";
 import SingleTag from "../SingleTag/SingleTag";
-import PostHeader from "@/components/PostHeader/PostHeader.jsx";
 
 export default function Post() {
   const [title, setTitle] = useState("Title");
@@ -14,7 +13,6 @@ export default function Post() {
   useEffect(() => {}, [tags]);
   return (
     <>
-      <PostHeader />
       <form className="post">
         <ImageGen />
         <input className="post__input" type="text" placeholder="Title"></input>
