@@ -12,7 +12,7 @@ export default function PostHeader() {
       <div className="poster__greg">
         <img className="poster__image" src={greg} />
         <div className="poster__texts">
-          <p className="poster__name">Greg</p>
+          <p className="poster__name">Carlos</p>
           <p className="poster__text">Posting in Buy & Sell</p>
         </div>
       </div>

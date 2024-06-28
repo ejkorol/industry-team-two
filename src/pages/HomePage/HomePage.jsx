@@ -4,11 +4,13 @@ import ImageGen from "@/components/ImageGen/ImageGen";
 import Footer from "../../components/Footer/Footer";
 import Post from "../../components/Post/Post";
 import PostFooter from "../../components/PostFooter/PostFooter";
+import PostHeader from "@/components/PostHeader/PostHeader.jsx";
+
 
 export default function HomePage() {
   return (
     <>
-      <NavBar />
+      <PostHeader />
       <Post />
       <PostFooter />
     </>

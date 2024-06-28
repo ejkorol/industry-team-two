@@ -8,19 +8,26 @@
     &__top-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding: 2rem 1.5rem;
     }
 
+    &__chevron {
+        position: absolute;
+        left: 0;
+        margin-left: 1rem;
+    }
+
     &__title {
-        @include typography(1.2rem, 300, rgb(90, 86, 86), 20px, none, uppercase);
-        padding-right: 12rem;
+        @include typography(1rem, 300, rgb(90, 86, 86), 15.92px, none, uppercase);
+        padding-right: 0;
+        align-self: center;
     }
 
     &__image {
         border-radius: 50%;
-        width: 80px;
-        height: 80px;
+        width: 41px;
+        height: 41px;
     }
 
     &__greg {
@@ -33,15 +40,15 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
-        padding-left: 1rem;
+        padding-left: 0.5rem;
     }
 
     &__name {
-        @include typography(1.1rem, 700, rgb(63, 60, 60), 20px, none, normal);
-        padding: 0.5rem 0;
+        @include typography(1rem, 700, rgb(63, 60, 60), 20px, none, normal);
+        padding: 0;
     }
 
     &__text {
-        @include typography(1rem, 300, rgb(90, 86, 86), 20px, none, normal);
+        @include typography(1rem, 200, rgb(90, 86, 86), 20px, none, normal);
     }
 }
