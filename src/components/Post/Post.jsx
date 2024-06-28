@@ -27,18 +27,34 @@ export default function Post({ analysis: { title, description, tags, pricePoint,
 
   return (
     <form className="post">
+      <div className="post-label">
+        <h3>Title</h3>
+        <p>edit</p>
+      </div>
       <input
         className="post__input"
         type="text"
         value={postTitle}
         onChange={(e) => { setPostTitle(e.target.value) }}
       ></input>
+      <div className="post-label">
+        <h3>Category</h3>
+        <p>edit</p>
+      </div>
       <select placeholder="Category" className="post__input">
         {postCategory.map((post, i) => {
           return <option key={i}>{post}</option>
         })}
       </select>
+      <div className="post-label">
+        <h3>Pricing</h3>
+        <p>edit</p>
+      </div>
       <input className="post__input" value={postPrice} onChange={(e) => { setPostPrice(e.target.value) }} />
+      <div className="post-label">
+        <h3>Description</h3>
+        <p>edit</p>
+      </div>
       <textarea
         className="post__input post__input--description"
         value={postDescription}

@@ -4,7 +4,17 @@
 
 .post {
   padding: 1rem;
-
+    &-label{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        h3{
+            @include typography(16px, 600, #7F828D, 18px, none, normal);
+        }
+        p{
+            @include typography(13px, 400, #7F828D, 20px, none, normal);
+        }
+    }
   &-profile {
     display: flex;
     align-items: center;
@@ -29,7 +39,7 @@
   }
   &__input {
     @include typography(18px, 300, #d2d3d7, 18px, none, normal);
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
     width: 100%;
     padding: 1.25rem 0.75rem;
     border: 1px solid #d9d9d9;
@@ -51,11 +61,11 @@
     margin-top: 2rem;
     padding-bottom: 1rem;
     &--header {
-      @include typography(1rem, 600, gray, 18px, none, capitalize);
+      @include typography(18px, 600, #6E727F, 18px, none, capitalize);
       margin-top: 1rem;
     }
     &--body {
-        @include typography(11px, 300, gray, 18px, none, normal);
+        @include typography(14px, 300, #70727F, 20px, none, normal);
       margin-top: 1rem;
     }
     &--small {
@@ -73,12 +83,14 @@
   margin-top: 2rem;
 }
 .tag {
-  background-color: rgba(blue, 0.05);
+  background-color: #F3F3FA;
+  @include typography(14px, 600, #4A4880, 14px, none, normal);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.25rem;
   border-radius: 4px;
-  border: 1px solid $Purple;
+  border: 1px solid #C9CAEA;
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
   &__text {
