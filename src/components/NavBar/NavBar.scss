@@ -20,12 +20,12 @@
   &__logo {
     height: 2rem;
     display: none;
-    @include respond-to-min($tablet) {
+    @include respond-to-min($mobile) {
       display: flex;
     }
     &--mobile {
       height: 2rem;
-      @include respond-to-min($tablet) {
+      @include respond-to-min($mobile) {
         display: none;
       }
     }
