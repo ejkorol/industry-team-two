@@ -48,6 +48,9 @@ export default function ImageGen() {
       </div>
       <br/>
       <button onClick={() => { convertBase() }}>convert</button>
+      {base64 && !data && <>
+          <h2>Loading...</h2>
+        </>}
       {data && <>
         <h1>{data.analysis.title}</h1>
         <p>{data.analysis.description}</p>
