@@ -1,0 +1,49 @@
+@use "@/assets/styles/partials/mixins" as *;
+@use "@/assets/styles/partials/variables" as *;
+
+.upload {
+  &__image-wrapper {
+    @include respond-to-min($desktop) {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  &__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    @include respond-to-min($tablet) {
+      width: 50%;
+      margin-bottom: 1.5rem;
+    }
+    @include respond-to-min($desktop) {
+      margin-bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__file-input-label {
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    @include respond-to-min($tablet) {
+      height: 20rem;
+      width: 50%;
+    }
+    @include respond-to-min($desktop) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__file-input {
+    display: none;
+  }
+}
