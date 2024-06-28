@@ -3,7 +3,11 @@
 
 .upload {
   &__image-wrapper {
-    padding: 0 1rem;
+    margin: 0 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    display: flex;
+
     @include respond-to-min($desktop) {
       height: 100%;
       overflow: hidden;
@@ -12,10 +16,9 @@
   &__image {
     width: 100%;
     aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
     border-radius: 0.25rem;
-    margin-bottom: 1rem;
     @include respond-to-min($tablet) {
       width: 50%;
       margin-bottom: 1.5rem;
@@ -38,6 +41,7 @@
     }
   }
   &__file-input-label {
+    @include typography(1rem, 600, $Dark-Blue, 14px, none, normal);
     height: 12rem;
     width: 100%;
     border-radius: 0.25rem;
@@ -46,6 +50,9 @@
     justify-content: center;
     cursor: pointer;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     @include respond-to-min($tablet) {
       height: 20rem;
       width: 50%;
@@ -57,5 +64,8 @@
   }
   &__file-input {
     display: none;
+  }
+  &__image__span{
+    font-size: 2rem;
   }
 }

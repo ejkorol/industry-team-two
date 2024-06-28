@@ -45,7 +45,8 @@ export default function ImageGen() {
   return (
     <>
       <div className="upload__image-wrapper">
-        {!imagePreview && <label htmlFor="image" className="upload__file-input-label">Select an image</label>}
+
+        {!imagePreview && <label htmlFor="image" className="upload__file-input-label"><span className="upload__image__span">+</span>Add photo</label>}
         <input className="upload__file-input" id="image" type="file" onChange={selectFile} accept="image/*" required />
         {imagePreview && <img className="upload__image" src={imagePreview} alt="work hard everyday, make few fucking money" />}
       </div>
