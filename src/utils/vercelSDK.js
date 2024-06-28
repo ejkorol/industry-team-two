@@ -10,7 +10,6 @@ const openai = createOpenAI({ apiKey: 'sk-proj-f3mkT4FIwtrViyRI3b1CT3BlbkFJtSTxI
 
 export async function returnData(image) {
   try {
-    console.log(image);
     const { object } = await generateObject({
       model: openai('gpt-4-turbo'),
       maxTokens: 512,
@@ -31,8 +30,6 @@ export async function returnData(image) {
         }
       ]
     })
-
-    console.log(object);
     return object;
 
   } catch (e) {
