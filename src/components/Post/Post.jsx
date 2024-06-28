@@ -2,7 +2,7 @@ import "./Post.scss";
 import { useEffect, useState } from "react";
 import SingleTag from "../SingleTag/SingleTag";
 
-export default function Post({ analysis: { title, description, tags } }) {
+export default function Post({ analysis: { title, description, tags, pricePoint, categories } }) {
   const [postTitle, setPostTitle] = useState("Title");
   const [postCategory, setPostCategory] = useState([
     "clothing", "computers", "fashion", "art"
@@ -14,9 +14,14 @@ export default function Post({ analysis: { title, description, tags } }) {
   useEffect(() => {
     setPostTitle(title);
     setPostDescription(description);
+    setPostPrice(pricePoint);
     if (tags) {
       const tagArray = tags.split(",")
       setPostTags(tagArray);
+    }
+    if (categories) {
+      const categoryArray = tags.split(",")
+      setPostCategory(categoryArray);
     }
   }, []);
 
