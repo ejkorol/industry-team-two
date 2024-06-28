@@ -1,5 +1,5 @@
 import "./Success.scss";
-import tubeMan from '../../assets/tube-man.png'
+import tubeMan from "../../assets/tube-man.png";
 
 export default function Success() {
   return (
