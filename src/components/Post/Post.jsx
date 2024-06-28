@@ -39,22 +39,18 @@ export default function Post({ analysis: { title, description, tags, pricePoint,
         })}
       </select>
       <input className="post__input" value={postPrice} onChange={(e) => { setPostPrice(e.target.value) }} />
-      <input
+      <textarea
         className="post__input post__input--description"
-        type="text"
         value={postDescription}
         onChange={(e) => { setPostDescription(e.target.value) }}
-      ></input>
+      ></textarea>
       <div className="post__tags">
         <h2 className="post__tags--header">Tags</h2>
         <p className="post__tags--body">
           Increase your ad exposure. Enter up to 5 keywords buyers could search
           to find your ad.
         </p>
-        <input className="post__input" placeholder="Tags(Optional)"></input>
-        <p className="post__tags--small">
-          Enter a keyword and press enter or next
-        </p>
+        <input className="post__input post__input--tags" placeholder="Tags(Optional)"></input>
         <div className="tags">
           {postTags && postTags.map((tag, index) =>
             <SingleTag key={index} tag={tag} index={index}/>

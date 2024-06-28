@@ -2,86 +2,95 @@
 @use "@/assets/styles/partials/typography" as *;
 @use "@/assets/styles/partials/variables" as *;
 
-.post{
-    padding: 1rem;
-    color: white;
-    background-color: black;
+.post {
+  padding: 1rem;
 
-    &-profile{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 14px;
-        &__image{
-            height: 25px;
-            width: 25px;
-            border-radius: 25px;
-            background-color: grey;
-        }
-    }
-    &-add-photo{
-        border: 1px solid grey;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 4px;
-        height: 100px;
-        margin: 1rem 0;
-        text-align: center;
-    }
-    &__input{
-        margin-top: 1rem;
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid grey;
-        border-radius: 4px;
-        background-color: black;
-        color: white;
-        &--description{
-            height: 100px;
-        }
-    }
-    &__tags{
-        border-top: 1px solid grey;
-        border-bottom: 1px solid grey;
-        margin-top: 2rem;
-        padding-bottom: 1rem;
-        &--header{
-            margin-top: 1rem;
-            font-size: 14px;
-        }
-        &--body{
-            margin-top: 1rem;
-            font-size: 11px;
-        }
-        &--small{
-            margin-top: 0.25rem;
-            margin-left: 0.5rem;
-            font-size: 10px;
-        }
-    }
-}
-
-.tags{
+  &-profile {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-.tag{
-    background-color: pink;
+    font-size: 14px;
+    &__image {
+      height: 25px;
+      width: 25px;
+      border-radius: 25px;
+      background-color: grey;
+    }
+  }
+  &-add-photo {
+    border: 1px solid #d9d9d9;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 0.25rem;
     border-radius: 4px;
-    padding: 0 0.5rem;
-    &__text{
-        color: purple;
+    height: 100px;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  &__input {
+    @include typography(18px, 300, #d2d3d7, 18px, none, normal);
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1.25rem 0.75rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    color: #6e727f;
+    &--description {
+      height: 150px;
+      resize: none;
+      overflow: auto;
     }
-    &__remove{
-        color: white;
-        background-color: purple;
-        border-radius: 50%;
-        font-size: 10px;
+    &--tags{
+        background-color: white;
+        margin-top: 0.25rem;
     }
+  }
+  &__tags {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    &--header {
+      @include typography(1rem, 600, gray, 18px, none, capitalize);
+      margin-top: 1rem;
+    }
+    &--body {
+        @include typography(11px, 300, gray, 18px, none, normal);
+      margin-top: 1rem;
+    }
+    &--small {
+      margin-top: 0.25rem;
+      margin-left: 0.5rem;
+      font-size: 10px;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.tag {
+  background-color: rgba(blue, 0.05);
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid $Purple;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  &__text {
+    color: $Purple;
+    text-transform: capitalize;
+  }
+  &__remove {
+    color: white;
+    background-color: $Purple;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+  }
 }
