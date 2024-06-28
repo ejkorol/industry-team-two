@@ -3,7 +3,7 @@
 @use '@/assets/styles/partials/variables' as *;
 
 .poster {
-    background-color: $Light;
+    background-color: white;
 
     &__top-container {
         display: flex;

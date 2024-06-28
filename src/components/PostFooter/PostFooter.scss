@@ -3,7 +3,7 @@
 @use "@/assets/styles/partials/variables" as *;
 
 .post-footer{
-    background-color: $Light;
+    background-color: white;
     padding: 1.5rem 1rem;
 
     &__buttons{
@@ -16,7 +16,7 @@
         @include typography(15px, 400, $White, 20px, none, capitalize);
         width: 50%;
         color: $Purple;
-        background-color: $Light;
+        background-color: white;
         border: 1px solid $Purple;
         padding: 1rem 0.5rem;
         border-radius: 4px;
