@@ -9,10 +9,9 @@ import Success from "../../components/Success/Success";
 export default function HomePage() {
   return (
     <>
-      {/* <NavBar />
-      <Post />
-      <PostFooter /> */}
-      <Success />
+      <NavBar />
+      <ImageGen />
+      <PostFooter />
     </>
   );
 };
