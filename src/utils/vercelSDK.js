@@ -32,6 +32,7 @@ export async function returnData(image) {
       ]
     })
 
+    console.log(object);
     return object;
 
   } catch (e) {
