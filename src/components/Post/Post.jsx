@@ -1,39 +1,44 @@
 import "./Post.scss";
 import { useEffect, useState } from "react";
-import ImageGen from "@/components/ImageGen/ImageGen";
 import SingleTag from "../SingleTag/SingleTag";
 
-export default function Post() {
-  const [title, setTitle] = useState("Title");
-  const [Category, setCategory] = useState("Category");
-  const [Description, setDescription] = useState("Description");
-  const [tags, setTags] = useState(["bike", "electronics"]);
-  const [ data, setData ] = useState(null);
+export default function Post({ analysis: { title, description, tags } }) {
+  const [postTitle, setPostTitle] = useState("Title");
+  const [postCategory, setPostCategory] = useState([
+    "clothing", "computers", "fashion", "art"
+  ]);
+  const [postDescription, setPostDescription] = useState("Description");
+  const [postTags, setPostTags] = useState(null);
+  const [postPrice, setPostPrice] = useState("Price (optional)")
 
   useEffect(() => {
+    setPostTitle(title);
+    setPostDescription(description);
+    if (tags) {
+      const tagArray = tags.split(",")
+      setPostTags(tagArray);
+    }
+  }, []);
 
-  }, [tags])
   return (
     <form className="post">
-      <div className="post-profile">
-        <img className="post-profile__image"></img>
-        <div className="post-profile__texts">
-          <p className="post-profile__text">Name</p>
-          <p className="post-profile__text">Posting in Buy & Sell</p>
-        </div>
-      </div>
-      <ImageGen />
-      <input className="post__input" type="text" placeholder="Title"></input>
-      <input className="post__input" type="text" placeholder="Category"></input>
       <input
         className="post__input"
         type="text"
-        placeholder="Price(Optional)"
+        value={postTitle}
+        onChange={(e) => { setPostTitle(e.target.value) }}
       ></input>
+      <select placeholder="Category" className="post__input">
+        {postCategory.map((post, i) => {
+          return <option key={i}>{post}</option>
+        })}
+      </select>
+      <input className="post__input" value={postPrice} onChange={(e) => { setPostPrice(e.target.value) }} />
       <input
         className="post__input post__input--description"
         type="text"
-        placeholder="Description"
+        value={postDescription}
+        onChange={(e) => { setPostDescription(e.target.value) }}
       ></input>
       <div className="post__tags">
         <h2 className="post__tags--header">Tags</h2>
@@ -46,11 +51,9 @@ export default function Post() {
           Enter a keyword and press enter or next
         </p>
         <div className="tags">
-          {tags.map((tag, index) => {
-            return (
-              <SingleTag key={index} tag={tag} index={index}/>
-            );
-          })}
+          {postTags && postTags.map((tag, index) =>
+            <SingleTag key={index} tag={tag} index={index}/>
+          )}
         </div>
       </div>
     </form>

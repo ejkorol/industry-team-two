@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { returnData } from "@/utils/vercelSDK";
+import Post from "@/components/Post/Post";
+import PostSkeleton from "@/components/PostSkeleton/PostSkeleton";
 import "./ImageGen.scss";
 
 export default function ImageGen() {
@@ -25,7 +27,7 @@ export default function ImageGen() {
     };
   };
 
-  const convertBase = () => {
+  function convertBase() {
     const reader = new FileReader();
     reader.readAsDataURL(selectedFile);
 
@@ -39,23 +41,15 @@ export default function ImageGen() {
 
   return (
     <>
-      <h1>Image Generation</h1>
-      <br/>
       <div className="upload__image-wrapper">
         { !imagePreview && <label htmlFor="image" className="upload__file-input-label">select an image</label> }
-        <input className="upload__file-input" id="image" type="file" onChange={selectFile}  accept="image/*" required />
+        <input className="upload__file-input" id="image" type="file" onChange={selectFile} accept="image/*" required />
         { imagePreview && <img className="upload__image" src={imagePreview} alt="work hard everyday, make few fucking money" /> }
       </div>
       <br/>
       <button onClick={() => { convertBase() }}>convert</button>
-      {base64 && !data && <>
-          <h2>Loading...</h2>
-        </>}
-      {data && <>
-        <h1>{data.analysis.title}</h1>
-        <p>{data.analysis.description}</p>
-        <p>{data.analysis.tags}</p>
-      </>}
+      {base64 && !data && <PostSkeleton />}
+      {data && <Post analysis={data.analysis} />}
     </>
   );
 };
