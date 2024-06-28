@@ -3,6 +3,7 @@
 
 .upload {
   &__image-wrapper {
+    padding: 0 1rem;
     @include respond-to-min($desktop) {
       height: 100%;
       overflow: hidden;
@@ -23,6 +24,17 @@
       margin-bottom: 0;
       height: 100%;
       width: 100%;
+    }
+    &-button {
+      @include typography(15px, 400, $White, 20px, none, capitalize);
+      width: 50%;
+      border: 1px solid $Purple;
+      padding: 1rem 0.5rem;
+      border-radius: 4px;
+      background-color: $Purple;
+      color: $White;
+      margin: 0 auto;
+      display: block;
     }
   }
   &__file-input-label {

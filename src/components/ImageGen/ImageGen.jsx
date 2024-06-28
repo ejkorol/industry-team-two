@@ -47,7 +47,7 @@ export default function ImageGen() {
         { imagePreview && <img className="upload__image" src={imagePreview} alt="work hard everyday, make few fucking money" /> }
       </div>
       <br/>
-      <button onClick={() => { convertBase() }}>convert</button>
+      <button className="upload__image-button" onClick={() => { convertBase() }}>convert</button>
       {base64 && !data && <PostSkeleton />}
       {data && <Post analysis={data.analysis} />}
     </>
