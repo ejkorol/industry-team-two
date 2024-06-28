@@ -60,7 +60,7 @@ export default function Post({ analysis: { title, description, tags, pricePoint,
             <SingleTag key={index} tag={tag} index={index}/>
           )}
         </div>
+        </div>
       </form>
-    </>
   );
 }
