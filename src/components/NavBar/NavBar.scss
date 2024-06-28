@@ -1,0 +1,74 @@
+@use "@/assets/styles/partials/mixins" as *;
+@use "@/assets/styles/partials/typography" as *;
+@use "@/assets/styles/partials/variables" as *;
+
+.navbar {
+  border-top: 0.4rem solid $Dark-Blue;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    @include respond-to-min($desktop) {
+      padding: 1rem 8rem;
+    }
+    @include respond-to-max($desktop) {
+      max-width: $desktop;
+      margin: auto;
+    }
+  }
+  &__logo {
+    height: 2rem;
+    display: none;
+    @include respond-to-min($tablet) {
+      display: flex;
+    }
+    &--mobile {
+      height: 2rem;
+      @include respond-to-min($tablet) {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    gap: 1rem;
+  }
+  &__container {
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__onboarding {
+    display: flex;
+    gap: 0.5rem;
+  }
+  &__text {
+    @include typography(1rem, 400, $Black, null, none, normal);
+    &--con {
+      display: none;
+      @include respond-to-min($tablet) {
+        display: flex;
+      }
+    }
+  }
+  &__link {
+    @include typography(1rem, 400, $Dark-Blue, null, none, capitalize);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $Purple;
+    }
+    &--register {
+      display: none;
+      @include respond-to-min($tablet) {
+        display: flex;
+      }
+    }
+    &--signin {
+      text-transform: capitalize;
+    }
+    &--locale {
+      text-transform: uppercase;
+    }
+  }
+}
