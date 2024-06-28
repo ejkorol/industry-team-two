@@ -9,10 +9,8 @@ export default function HomePage() {
   return (
     <>
       <NavBar />
-      <ImageGen />
       <Post />
       <PostFooter />
-      <ImageGen />
     </>
   );
 };

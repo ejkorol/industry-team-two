@@ -1,11 +1,18 @@
 import "./Post.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ImageGen from "@/components/ImageGen/ImageGen";
+import SingleTag from "../SingleTag/SingleTag";
 
 export default function Post() {
   const [title, setTitle] = useState("Title");
   const [Category, setCategory] = useState("Category");
   const [Description, setDescription] = useState("Description");
   const [tags, setTags] = useState(["bike", "electronics"]);
+  const [ data, setData ] = useState(null);
+
+  useEffect(() => {
+
+  }, [tags])
   return (
     <form className="post">
       <div className="post-profile">
@@ -15,10 +22,7 @@ export default function Post() {
           <p className="post-profile__text">Posting in Buy & Sell</p>
         </div>
       </div>
-      <div className="post-add-photo">
-        <p>+</p>
-        <p className="post-add-photo__text">Add photo</p>
-      </div>
+      <ImageGen />
       <input className="post__input" type="text" placeholder="Title"></input>
       <input className="post__input" type="text" placeholder="Category"></input>
       <input
@@ -42,12 +46,9 @@ export default function Post() {
           Enter a keyword and press enter or next
         </p>
         <div className="tags">
-          {tags.map((tag) => {
+          {tags.map((tag, index) => {
             return (
-              <div class="tag">
-                <p className="tag__text">{tag}</p>
-                <button className="tag__remove">X</button>
-              </div>
+              <SingleTag key={index} tag={tag} index={index}/>
             );
           })}
         </div>
