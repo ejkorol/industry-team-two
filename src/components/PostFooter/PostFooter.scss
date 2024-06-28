@@ -1,0 +1,37 @@
+@use "@/assets/styles/partials/mixins" as *;
+@use "@/assets/styles/partials/typography" as *;
+@use "@/assets/styles/partials/variables" as *;
+
+.post-footer{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        border-radius: 4px;
+    }
+    &__button{
+        @include typography(15px, 400, $White, 20px, none, capitalize);
+        width: 50%;
+        color: $White;
+        background-color: black;
+        border: 1px solid $Purple;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+    &__terms{
+        @include typography(10px, 400, $White, 20px, none, capitalize);
+        text-align: center;
+        margin-top: 1rem;
+    }
+    &__underline{
+        text-decoration: underline;
+    }
+}
+
+.button__publish{
+    background-color: $Purple;
+}
