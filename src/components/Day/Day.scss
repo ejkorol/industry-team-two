@@ -1,0 +1,52 @@
+@use '@/assets/styles/partials/mixins.scss' as *;
+@use '@/assets/styles/partials/typography.scss' as *;
+@use '@/assets/styles/partials/variables.scss' as *;
+
+.day {
+    &__container {
+        width: 18.75rem;
+        margin: 0 auto;
+        border: 1px solid $Purple;
+        border-radius: .5rem;
+        padding: 1.25rem;
+        box-shadow: 0 .25rem .5rem $Secondary;
+    }
+    
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1.25rem;
+        @include typography(0.9rem, 600, $Purple, null, none, normal)
+    }
+
+    &__hours {
+        display: flex;
+        flex-direction: column;
+        gap: .625rem;
+    }
+
+    &__hour-button {
+        background-color: $Purple;
+        color: $White;
+        border: none;
+        border-radius: .25rem;
+        padding: .625rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    hour-button:hover {
+        background: rgba(236, 232, 232, 0.815);
+    }
+}
+  
+
+  
+
+  
+
+  
+
+  

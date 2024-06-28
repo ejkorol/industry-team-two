@@ -1,0 +1,78 @@
+@use '@/assets/styles/partials/mixins.scss' as *;
+@use '@/assets/styles/partials/typography.scss' as *;
+@use '@/assets/styles/partials/variables.scss' as *;
+
+
+.chat {
+    max-width: 29.375rem;
+    min-width: 20rem;
+    height: 150vh;
+    background-color: $Secondary;
+
+    &__contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+
+    &__name {
+        @include typography(1rem, 500, $White, null, none, normal);
+        padding-right: 11rem;
+    }
+
+    &__chevron {
+        padding-left: 1rem;
+    }
+
+    &__item {
+        max-width: 29.375rem;
+        height: 10vh;
+        padding: 1rem;
+        border-top: solid 1px $Light;
+        border-bottom: solid 1px $Light;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(95, 92, 92, 0.671);
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+        width: 150px;
+        height: 100px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding-left: 1rem;
+    }
+
+    &__text {
+        margin: 0;
+        @include typography(1rem, 500, $White, null, none, normal);
+    }
+
+    &__subtext {
+        margin: 0;
+        @include typography(0.8rem, 500, gray, null, none, normal);
+    }
+
+    &__mini {
+        @include typography(0.8rem, 500, gray, null, none, normal);
+
+    }
+
+    &__msg-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__msg {
+        @include typography(1rem, 500, $White, null, none, normal);
+
+    }
+}

@@ -1,0 +1,47 @@
+@use '@/assets/styles/partials/mixins' as *;
+@use '@/assets/styles/partials/typography' as *;
+@use '@/assets/styles/partials/variables' as *;
+
+.poster {
+    background-color: $Light;
+
+    &__top-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 1.5rem;
+    }
+
+    &__title {
+        @include typography(1.2rem, 300, rgb(90, 86, 86), 20px, none, uppercase);
+        padding-right: 12rem;
+    }
+
+    &__image {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    &__greg {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__name {
+        @include typography(1.1rem, 700, rgb(63, 60, 60), 20px, none, normal);
+        padding: 0.5rem 0;
+    }
+
+    &__text {
+        @include typography(1rem, 300, rgb(90, 86, 86), 20px, none, normal);
+    }
+}

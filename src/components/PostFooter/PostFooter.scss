@@ -3,9 +3,8 @@
 @use "@/assets/styles/partials/variables" as *;
 
 .post-footer{
-    background-color: black;
-    color: white;
-    padding: 1rem;
+    background-color: $Light;
+    padding: 1.5rem 1rem;
 
     &__buttons{
         display: flex;
@@ -16,16 +15,17 @@
     &__button{
         @include typography(15px, 400, $White, 20px, none, capitalize);
         width: 50%;
-        color: $White;
-        background-color: black;
+        color: $Purple;
+        background-color: $Light;
         border: 1px solid $Purple;
-        padding: 0.5rem;
+        padding: 1rem 0.5rem;
         border-radius: 4px;
     }
     &__terms{
-        @include typography(10px, 400, $White, 20px, none, capitalize);
+        @include typography(16px, 400, gray, 20px, none, capitalize);
         text-align: center;
         margin-top: 1rem;
+        padding-bottom: 2rem;
     }
     &__underline{
         text-decoration: underline;
@@ -34,4 +34,5 @@
 
 .button__publish{
     background-color: $Purple;
+    color: $White;
 }
