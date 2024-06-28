@@ -3,8 +3,10 @@
 @use "@/assets/styles/partials/variables" as *;
 
 .post-footer{
+    justify-self: end;
     background-color: white;
     padding: 1.5rem 1rem;
+  margin-bottom: auto;
 
     &__buttons{
         display: flex;

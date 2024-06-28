@@ -43,7 +43,7 @@ export default function ImageGen() {
   };
 
   return (
-    <>
+    <div className="upload">
       <div className="upload__image-wrapper">
 
         {!imagePreview && <label htmlFor="image" className="upload__file-input-label"><span className="upload__image__span">+</span>Add photo</label>}
@@ -53,6 +53,6 @@ export default function ImageGen() {
       <br />
       {base64 && !data && <PostSkeleton />}
       {data && <Post analysis={data.analysis} />}
-    </>
+    </div>
   );
 };

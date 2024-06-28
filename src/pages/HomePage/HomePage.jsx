@@ -6,13 +6,16 @@ import Post from "../../components/Post/Post";
 import PostFooter from "../../components/PostFooter/PostFooter";
 import PostHeader from "../../components/PostHeader/PostHeader";
 import Success from "../../components/Success/Success";
+import "./HomePage.scss";
 
 export default function HomePage() {
   return (
-    <>
-      <PostHeader />
-      <ImageGen />
+    <section className="HomePage">
+      <div className="HomePage__top">
+        <PostHeader />
+        <ImageGen />
+      </div>
       <PostFooter />
-    </>
+    </section>
   );
 };
