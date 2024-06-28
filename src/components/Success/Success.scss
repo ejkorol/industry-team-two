@@ -3,11 +3,11 @@
 @use "@/assets/styles/partials/variables" as *;
 
 .success{
-    padding: 80px 21px;
+    padding: 0 21px;
     display: flex;
     flex-direction: column;
     &__tube-man{
-        margin: 129px auto 132px;
+        margin: 25% auto 25%;
         width: 219px;
         height: 217px;
     }
@@ -32,6 +32,7 @@
         }
         &__link{
             @include typography(14px, 600, #2C844C, 18px, none, normal);
+            padding-bottom: 4rem;
         }
     }
 }
